@@ -31,3 +31,21 @@ Array.from(buttons).forEach((button) => {
     }
   });
 });
+
+
+
+document.addEventListener("keydown", (e) => {
+  if ("0123456789+-*/.".includes(e.key)) {
+    string += e.key;
+    display.value = string;
+  }
+  if (e.key === "Enter") {
+    string = eval(string);
+    display.value = string;
+  }
+  if (e.key === "Backspace") {
+    string = string.slice(0, -1);
+    display.value = string;
+  }
+});
+
