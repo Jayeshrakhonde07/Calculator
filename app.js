@@ -43,7 +43,7 @@ document.addEventListener("keydown", (e) => {
     string = eval(string);
     display.value = string;
   }
-  if (e.key === "Backspace") {
+  if (e.key === "Delete") {
     string = string.slice(0, -1);
     display.value = string;
   }
